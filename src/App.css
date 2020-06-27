@@ -1,0 +1,15 @@
+.wrapper{
+  display:grid;
+  grid-template-rows:60px 1fr;
+  grid-template-columns:1fr 5fr;
+  grid-template-areas:
+  "header header"
+  "sidebar content";
+}
+.content-wrapper{
+  grid-area:content;
+  background:yellow;
+}
+.item{
+  color: green;
+}
