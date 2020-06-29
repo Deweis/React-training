@@ -1,7 +1,3 @@
-.content{
-    grid-area:content;
-    background:yellow;
-}
-.item{
-    color: green;
+.postsWrap__textarea{
+    width:100%;
 }

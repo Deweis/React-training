@@ -2,3 +2,15 @@
     grid-area:sidebar;
     background: pink;
 }
+#nav li{
+    padding:15px;
+    font-size:15px;
+    text-align:center;
+}
+.active{
+    color:darkred;
+    opacity:0.8;
+    border-radius:50px;
+    font-style: italic;
+    font-weight: bold;
+}

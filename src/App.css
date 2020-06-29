@@ -1,4 +1,11 @@
-.wrapper{
+ul, li {
+  list-style:none;
+  padding:0;
+}
+a{
+  color:white;
+}
+.mainWrapper{
   display:grid;
   grid-template-rows:60px 1fr;
   grid-template-columns:1fr 5fr;
@@ -6,10 +13,7 @@
   "header header"
   "sidebar content";
 }
-.content-wrapper{
+.contentWrapper{
   grid-area:content;
   background:yellow;
-}
-.item{
-  color: green;
 }

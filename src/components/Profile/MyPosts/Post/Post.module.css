@@ -1,0 +1,9 @@
+.post{
+    margin-top:60px;
+    border:2px solid green;
+    padding:15px;
+}
+.post__img{
+    width:70px;
+    height:70px;
+}
