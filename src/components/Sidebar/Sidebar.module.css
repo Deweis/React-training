@@ -1,6 +1,8 @@
-#nav{
-    grid-area:sidebar;
+.sidebarWrapper{
     background: pink;
+    grid-area:sidebar;
+}
+#nav{
 }
 #nav li{
     padding:15px;
