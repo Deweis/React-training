@@ -5,6 +5,20 @@ ul, li {
 a{
   color:white;
 }
+button{
+  color:green;
+  background:orange;
+  border:3px solid green;
+  border-radius:30px;
+  width:95px;
+  height:35px;
+  cursor:pointer;
+}
+button:hover{
+  color:orange;
+  background:green;
+  border-color:orange;
+}
 .mainWrapper{
   display:grid;
   grid-template-rows:60px 1fr;

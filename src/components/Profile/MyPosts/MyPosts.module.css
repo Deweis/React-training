@@ -1,3 +1,19 @@
+.postsWrap__inputArea{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    grid-template-areas:
+    "title title"
+    "txtarea txtarea"
+    ". btn";
+}
+.postsWrap__title{
+    grid-area:title;
+}
 .postsWrap__textarea{
+    grid-area:txtarea;
     width:100%;
+}
+.postsWrap__button{
+    grid-area:btn;
+    margin-top:10px;
 }

@@ -1,13 +1,22 @@
-.sidebarWrapper{
-    background: pink;
+.sidebar{
+    background: orange;
     grid-area:sidebar;
+    text-align: center;
+    color:white;
+    padding:0px 10px;
 }
-#nav{
+.sidebar__title{
+    font-size:30px;
+    text-align:left;
 }
-#nav li{
+.sidebar__friendsWrap{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.nav li{
     padding:15px;
     font-size:15px;
-    text-align:center;
 }
 .active{
     color:darkred;
