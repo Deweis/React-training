@@ -3,9 +3,8 @@ import * as serviceWorker from './serviceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {addPost, sendMessage, subscribe, updateMessengerText, updatePostText} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
-import state from "./redux/state";
+import store from "./redux/state";
 
 
 let renderEntireTree = (state) => {
@@ -14,18 +13,15 @@ let renderEntireTree = (state) => {
             <BrowserRouter>
                 <App
                     state={state}
-                    addPost = {addPost}
-                    sendMessage = {sendMessage}
-                    updatePostText={updatePostText}
-                    updateMessengerText={updateMessengerText}
+                    dispatch = {store.dispatch.bind(store)}
                 />
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
     );
 }
-renderEntireTree(state);
-subscribe(renderEntireTree);
+renderEntireTree(store.getState());
+store.subscribe(renderEntireTree);
 
 
 

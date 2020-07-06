@@ -7,11 +7,11 @@ import Author from "./Author/Author";
 const Dialogs = (props) => {
     let messageInputRead = React.createRef();
     let addMesage = () => {
-        props.sendMessage();
+        props.dispatch( {type: 'SEND-MESSAGE'} );
     }
     let onMessageChange = () => {
         let text = messageInputRead.current.value;
-        props.updateMessengerText(text);
+        props.dispatch( {type: 'UPDATE-MESSENGER-TEXT', newText: text} );
     }
 
 
