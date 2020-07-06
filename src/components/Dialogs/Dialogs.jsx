@@ -2,16 +2,17 @@ import React from "react";
 import style from "./Dialogs.module.css";
 import Message from "./Message/Message";
 import Author from "./Author/Author";
+import {sendMessageActionCreator, updateMessengerTextActionCreator} from "../../redux/state";
 
 
 const Dialogs = (props) => {
-    let messageInputRead = React.createRef();
+    /*let messageInputRead = React.createRef();*/
     let addMesage = () => {
-        props.dispatch( {type: 'SEND-MESSAGE'} );
+        props.dispatch( sendMessageActionCreator() );
     }
-    let onMessageChange = () => {
-        let text = messageInputRead.current.value;
-        props.dispatch( {type: 'UPDATE-MESSENGER-TEXT', newText: text} );
+    let onMessageChange = (e) => {
+        let text = e.target.value;
+        props.dispatch( updateMessengerTextActionCreator(text) );
     }
 
 
@@ -34,7 +35,7 @@ const Dialogs = (props) => {
                 className={style.dialog__input}
                 onChange={onMessageChange}
                 value={props.state.messagesInput}
-                ref={messageInputRead}
+                /*ref={messageInputRead}*/
             />
             <button
                 className={style.dialog__button}
