@@ -2,7 +2,8 @@ import React from "react";
 import style from "./Dialogs.module.css";
 import Message from "./Message/Message";
 import Author from "./Author/Author";
-import {sendMessageActionCreator, updateMessengerTextActionCreator} from "../../redux/state";
+import {sendMessageActionCreator, updateMessengerTextActionCreator} from "../../redux/dialogs-reducer";
+
 
 
 const Dialogs = (props) => {
@@ -35,6 +36,7 @@ const Dialogs = (props) => {
                 className={style.dialog__input}
                 onChange={onMessageChange}
                 value={props.state.messagesInput}
+                placeholder="Enter your message..."
                 /*ref={messageInputRead}*/
             />
             <button
