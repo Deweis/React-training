@@ -2,26 +2,25 @@ import React from "react";
 import style from "./Dialogs.module.css";
 import Message from "./Message/Message";
 import Author from "./Author/Author";
-import {sendMessageActionCreator, updateMessengerTextActionCreator} from "../../redux/dialogs-reducer";
-
 
 
 const Dialogs = (props) => {
+    debugger;
     /*let messageInputRead = React.createRef();*/
     let addMesage = () => {
-        props.dispatch( sendMessageActionCreator() );
+        props.addMesage();
     }
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.dispatch( updateMessengerTextActionCreator(text) );
+        props.onMessageChange(text);
     }
 
 
     /*Loop for every message that is sent to the UI*/
-    let msgLoop = props.state.messagesData.map( m => <Message message={m.message} />
+    let msgLoop = props.messagesData.map( m => <Message message={m.message} />
     );
     /*Loop for every dialog author*/
-    let authorLoop = props.state.dialogsData.map(d => <Author name={d.name} id={d.id} /> );
+    let authorLoop = props.dialogsData.map(d => <Author name={d.name} id={d.id} /> );
 
     return (
         <div className={style.dialog}>
@@ -35,7 +34,7 @@ const Dialogs = (props) => {
                 name="" id="" cols="30" rows="10"
                 className={style.dialog__input}
                 onChange={onMessageChange}
-                value={props.state.messagesInput}
+                value={props.messagesInput}
                 placeholder="Enter your message..."
                 /*ref={messageInputRead}*/
             />

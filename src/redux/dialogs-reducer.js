@@ -1,7 +1,21 @@
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_MESSENGER_TEXT = 'UPDATE-MESSENGER-TEXT';
 
-const dialogsReducer = (state, action) => {
+let initialState =  {
+    "dialogsData": [
+        {"id": 1, "name": "Michael"},
+        {"id": 2, "name": "Frederiko"},
+        {"id": 3, "name": "Danielle"},
+    ],
+    "messagesData": [
+        {"id": 1, "message": "Hello"},
+        {"id": 2, "message": "Bongiorno"},
+        {"id": 3, "message": "Bon jour"}
+    ],
+    "messagesInput": ""
+}
+
+const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SEND_MESSAGE:
             let postArrLength = state.messagesData.length + 1;
@@ -19,7 +33,6 @@ const dialogsReducer = (state, action) => {
 
         default:
             return state;
-
     }
 
 }
