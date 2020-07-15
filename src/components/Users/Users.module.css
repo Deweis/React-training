@@ -1,0 +1,47 @@
+.users {
+    padding: 100px;
+}
+
+.users__item {
+    display: flex;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.users__imgBlock {
+    margin-right: 20px;
+}
+
+.users__img {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.users__name {
+    margin-top: 5px;
+}
+
+.users__textWrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.users__locationBlock {
+    text-align: right;
+}
+
+.selectedPage {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.everyPage {
+    margin-right: 5px;
+    cursor: pointer;
+}

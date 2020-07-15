@@ -1,3 +1,19 @@
 .content__img img{
     width:40%;
 }
+.profileInfo{
+    display: flex;
+}
+.profileInfo__img{
+    margin-right:45px;
+}
+.profileInfo__group{
+    margin-bottom:20px;
+}
+.profileInfo__captions{
+    font-weight:bold;
+    font-style:italic;
+}
+.profileInfo__link{
+    color:orange;
+}

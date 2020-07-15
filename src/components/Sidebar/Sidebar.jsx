@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import Friends from "./Friends/Friends";
 
 const Sidebar = (props) => {
-    debugger;
     let friendsLoop = props.friends.map(value => <Friends id={value.id} friendName={value.friendName} friendPicture={value.friendPicture}  /> )
     return (
         <div className={style.sidebar}>
@@ -21,6 +20,9 @@ const Sidebar = (props) => {
                     </li>
                     <li>
                         <NavLink to="/Music" activeClassName={style.active}>Music</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Users" activeClassName={style.active}>Find users</NavLink>
                     </li>
                     <li>
                         <NavLink to="/Settings" activeClassName={style.active}>Settings</NavLink>

@@ -5,10 +5,9 @@ import Author from "./Author/Author";
 
 
 const Dialogs = (props) => {
-    debugger;
     /*let messageInputRead = React.createRef();*/
-    let addMesage = () => {
-        props.addMesage();
+    let sendMessage = () => {
+        props.addMessage();
     }
     let onMessageChange = (e) => {
         let text = e.target.value;
@@ -40,7 +39,7 @@ const Dialogs = (props) => {
             />
             <button
                 className={style.dialog__button}
-                onClick={addMesage}
+                onClick={sendMessage}
             >Send</button>
         </div>
     );
