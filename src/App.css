@@ -19,6 +19,9 @@ button:hover{
   background:green;
   border-color:orange;
 }
+button:disabled{
+  background:gray;
+}
 .mainWrapper{
   display:grid;
   grid-template-rows:60px 1fr;
